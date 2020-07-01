@@ -1,19 +1,19 @@
 {% set name = "terracotta" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 6431f341123d699844a223ef56bd53731bd0df0602917949f5b373173ea8d38f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4bb56aae409ca9dae1cab227c45273878b56b564a2b1ede98ae2f1be94b48a93
 
 build:
   number: 0
   entry_points:
     - terracotta=terracotta.scripts.cli:entrypoint
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -52,15 +52,12 @@ test:
     - terracotta --help
 
 about:
-  home: "https://github.com/DHI-GRAS/terracotta"
+  home: https://github.com/DHI-GRAS/terracotta
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A modern XYZ tile server written in Python"
-  description:
-    Terracotta is a pure Python tile server that runs as a WSGI app on a dedicated webserver
-    or as a serverless app on AWS Lambda. It is built on a modern Python 3.6 stack, powered
-    by awesome open-source software such as Flask, Zappa, and Rasterio.
+  summary: A modern XYZ tile server written in Python
+  description: Terracotta is a pure Python tile server that runs as a WSGI app on a dedicated webserver or as a serverless app on AWS Lambda. It is built on a modern Python 3.6 stack, powered by awesome open-source software such as Flask, Zappa, and Rasterio.
   doc_url: https://pypi.org/project/terracotta/#description
   dev_url: https://github.com/DHI-GRAS/terracotta
 
