@@ -10,7 +10,7 @@ source:
   sha256: 854e3b35810f9d128d0f6bc8983af6b52cc5ea8a9cc65329bad0446a01118a54
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - terracotta=terracotta.scripts.cli:entrypoint
   script: {{ PYTHON }} -m pip install . -vv
@@ -64,6 +64,4 @@ about:
 extra:
   recipe-maintainers:
     - mxr-conda
-    - ndmaxar
-    - oblute
-    - rluria14
+    - bubblyorca
