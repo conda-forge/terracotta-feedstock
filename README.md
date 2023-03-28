@@ -1,11 +1,11 @@
-About terracotta
-================
+About terracotta-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/terracotta-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/DHI-GRAS/terracotta
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/terracotta-feedstock/blob/main/LICENSE.txt)
 
 Summary: A modern XYZ tile server written in Python
 
