@@ -10,7 +10,7 @@ source:
   sha256: 1bc0437a15dc5a1bde3be290523459a7ab56aab5588e0daa6bfa08e49efe845f
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - terracotta=terracotta.scripts.cli:entrypoint
   script: {{ PYTHON }} -m pip install . -vv
