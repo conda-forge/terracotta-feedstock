@@ -31,7 +31,7 @@ requirements:
     - click
     - click-spinner
     - flask
-    - flask_cors
+    - flask-cors
     - marshmallow >=3.0.0
     - mercantile
     - numpy >=1.15,!=1.17.0
