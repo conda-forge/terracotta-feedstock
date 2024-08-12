@@ -1,5 +1,5 @@
 {% set name = "terracotta" %}
-{% set version = "0.8.3" %}
+{% set version = "0.8.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4b2ddd8ad5ff85411c89448d4299f40fe37ecb7bc087ad13c7fbc64c27c56998
+  sha256: 7d5f8a632141909a25bca2174a1e291e158285fe806192fe8742a754619ce6a6
 
 build:
   entry_points:
