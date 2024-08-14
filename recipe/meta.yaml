@@ -21,7 +21,7 @@ requirements:
     - python >=3.8
     - setuptools-scm
     - setuptools_scm_git_archive
-    - numpy >=1.15,!=1.17.0
+    - numpy >=1.15,!=1.17.0,<2
     - pip
   run:
     - python >=3.8
@@ -34,7 +34,7 @@ requirements:
     - flask-cors
     - marshmallow >=3.0.0
     - mercantile
-    - numpy >=1.15,!=1.17.0
+    - numpy >=1.15,!=1.17.0,<2
     - pillow
     - pyyaml >=3.10
     - shapely
