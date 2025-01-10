@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7d5f8a632141909a25bca2174a1e291e158285fe806192fe8742a754619ce6a6
 
 build:
@@ -14,17 +14,17 @@ build:
     - terracotta = terracotta.scripts.cli:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
     - setuptools_scm_git_archive
     - numpy >=1.15,!=1.17.0,<2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - apispec >=1.0
     - apispec-webframeworks
     - cachetools >=3.1.0
@@ -44,6 +44,8 @@ requirements:
     - tqdm
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - terracotta
     - terracotta.client
