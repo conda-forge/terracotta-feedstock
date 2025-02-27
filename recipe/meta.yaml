@@ -1,5 +1,5 @@
 {% set name = "terracotta" %}
-{% set version = "0.8.5" %}
+{% set version = "0.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7d5f8a632141909a25bca2174a1e291e158285fe806192fe8742a754619ce6a6
+  sha256: c17e04723d2b1cd1f0bf60e22f338b31902b1aab6e8ab5303f3edc4a1bebc68a
 
 build:
   entry_points:
     - terracotta = terracotta.scripts.cli:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
