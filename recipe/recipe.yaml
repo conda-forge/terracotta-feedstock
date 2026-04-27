@@ -23,7 +23,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools
+    - setuptools <81
     - setuptools-scm <8
     - setuptools_scm_git_archive
     - numpy >=1.15,!=1.17.0,<2
